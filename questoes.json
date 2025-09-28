@@ -1,0 +1,56 @@
+--- JOSÉ ALCIDES
+
+### Questões sobre o Processo de Compilação em Java
+
+1. Qual é a principal diferença entre o processo de compilação em Java e o de linguagens C++?
+Java compila o código fonte em bytecode após passar pelas análises léxica, sintática e semântica.
+Esse bytecode é executado pela JVM, que pode interpretá-lo ou compilá-lo em tempo de execução.
+Já o C++ realiza as mesmas análises, mas compila diretamente para código de máquina específico da plataforma, gerando um executável nativo.
+
+2. Explique o que acontece em cada uma das três fases de análise do compilador *javac*: Análise Léxica, Análise Sintática e Análise Semântica.
+Análise léxica: quebra o código fonte em tokens, como palavras-chave, identificadores e símbolos.
+Análise sintática: verifica se os tokens estão organizados de forma correta segundo a gramática da linguagem Java.
+Análise semântica: valida o significado do código, verificando tipos, escopos, e se as operações fazem sentido logicamente.
+   
+3. O que é o *bytecode* e qual é a sua principal função no processo de compilação do Java?
+O bytecode é o formato intermediário gerado pelo compilador Java, armazenado em arquivos .class, 
+e sua principal função é permitir que o programa seja executado por qualquer JVM, tornando o Java uma linguagem multiplataforma.
+
+4. Qual é o papel da *Máquina Virtual Java (JVM)* na execução de um programa Java, e por que o arquivo ".class" não é executado diretamente pelo sistema operacional?
+A JVM executa o bytecode Java, garantindo que o mesmo programa funcione em qualquer sistema com JVM.
+O arquivo .class não é executado diretamente porque o bytecode precisa ser interpretado ou compilado para o código nativo da plataforma,
+pois as maquinas não entendem byte code diretamente.
+
+5. O que é o compilador *JIT* e como ele melhora o desempenho dos programas em Java?
+O compilador JIT melhora o desempenho dos programas Java ao compilar dinamicamente os trechos mais usados do bytecode em código nativo, 
+acelerando a execução e evitando interpretações repetidas.
+
+### Questões sobre Linguagens Formais em Java
+
+6. Qual é a aplicação mais comum e direta das linguagens formais em Java, e para que ela é utilizada?
+Linguagens formais são utilizadas para definir regras gramaticais que determinam como os programas devem ser escritos. Elas são aplicadas na construção de compiladores,
+ na validação da estrutura do código e na análise sintática e semântica de programas Java, garantindo que o código siga corretamente a gramática da linguagem.
+
+7. No processo de compilação de um código Java, como as linguagens formais são usadas nas fases de Análise Léxica e Análise Sintática?
+No processo de compilação Java, linguagens formais são usadas na análise léxica para reconhecer tokens válidos por meio de padrões definidos,
+e na análise sintática para verificar se esses tokens estão organizados conforme a gramática da linguagem.
+Isso garante que o código fonte esteja estruturado corretamente antes de ser transformado em bytecode.
+
+8. O que é uma *Máquina de Estado Finito (FSM)* e como ela pode ser usada em Java?
+Uma Máquina de Estado Finito (FSM) é um modelo computacional que representa sistemas que mudam de estado com base em entradas específicas.
+Ela é composta por um conjunto de estados, transições entre esses estados, um estado inicial e, opcionalmente, estados finais. Em Java,
+a FSM pode ser usada para modelar comportamentos sequenciais e condicionais,
+sendo especialmente útil em situações como validação de entrada, análise léxica em compiladores, controle de fluxo em jogos ou interfaces,
+e implementação de protocolos de comunicação.
+
+9. Como as linguagens formais se relacionam com os schemas de validação de documentos, como os usados para *XML* e *JSON*?
+As linguagens formais se relacionam diretamente com os schemas de validação de documentos XML e JSON
+porque são usadas para definir regras estruturais e sintáticas que esses documentos devem seguir.
+Um schema funciona como uma gramática formal que descreve quais elementos, atributos, tipos de dados e estruturas são permitidos em um documento.
+No caso do XML, linguagens formais são aplicadas por meio de Document Type Definitions (DTDs) ou XML Schema Definitions (XSDs),
+que especificam a estrutura esperada do documento — como quais tags podem aparecer, em que ordem, e com quais atributos. Já no JSON, o equivalente é o JSON Schema,
+que define os tipos de dados esperados (string, número, booleano), os campos obrigatórios, os formatos válidos (como e-mail, data, etc.) e até restrições de valor.
+
+10. De acordo com o texto, qual é a principal utilidade de ferramentas como o *ANTLR* no contexto de linguagens formais em Java?
+A principal utilidade de ferramentas como o ANTLR (Another Tool for Language Recognition) no contexto de linguagens formais em Java 
+é automatizar a criação de analisadores léxicos e sintáticos com base em gramáticas formais.
